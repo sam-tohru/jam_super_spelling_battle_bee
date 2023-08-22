@@ -8,4 +8,4 @@ making this asynchronous multiplayer word game, you move the letters to form a v
 
 
 BUG NOTICES:
- 1. Letters in this github version upload will spawn letters behind the board (works normally on the playable itch web build, but something changed and need to adjust where the letters spawn), you can still click on the letters & form words (as you can see the "scrabble" piece, but the drawn letter sprites are behind)
+ 1. This github version upload will spawn Letters behind the Board (works normally on the playable itch web build, but something changed and need to adjust where the letters spawn), you can still click on the letters & form words (as you can see the "scrabble" piece, but the drawn letter sprites are behind)
