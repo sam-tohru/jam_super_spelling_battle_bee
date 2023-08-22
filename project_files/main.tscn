@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://tg31ysngayvs"]
+[gd_scene load_steps=5 format=3 uid="uid://tg31ysngayvs"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_rwe6y"]
 [ext_resource type="PackedScene" uid="uid://dm1bv1mr1mg7t" path="res://board/board.tscn" id="1_s222s"]
 [ext_resource type="PackedScene" uid="uid://dualcmxkok8n" path="res://main_camera.tscn" id="2_sa8cj"]
 [ext_resource type="PackedScene" uid="uid://bigfrcthsqmqp" path="res://menu/menu.tscn" id="3_eisaj"]
-[ext_resource type="PackedScene" uid="uid://cj2mma84twgfb" path="res://animations/networking.tscn" id="4_etcq1"]
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_rwe6y")
@@ -28,5 +27,3 @@ top_level = true
 wait_time = 0.1
 
 [node name="menu" parent="." instance=ExtResource("3_eisaj")]
-
-[node name="youtube" parent="." instance=ExtResource("4_etcq1")]
