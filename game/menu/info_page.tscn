@@ -1,0 +1,74 @@
+[gd_scene load_steps=6 format=3 uid="uid://b1f6qhkkvb26l"]
+
+[ext_resource type="Texture2D" uid="uid://dv6xn18i76wd" path="res://resources/buttons/menu/menu_2.png" id="1_eskqt"]
+[ext_resource type="Script" path="res://menu/info_page.gd" id="1_v82sx"]
+[ext_resource type="Texture2D" uid="uid://ccn11k5e1l15f" path="res://resources/buttons/menu/menuPressed_2.png" id="2_lhgxf"]
+[ext_resource type="FontFile" uid="uid://cfachjkk2umhy" path="res://resources/fonts/Helvetica Black Condensed.otf" id="3_yyikt"]
+[ext_resource type="Texture2D" uid="uid://b7cu1w66jnyre" path="res://resources/GWJ-Full-Logo-noBG-4k.png" id="4_40all"]
+
+[node name="info_page" type="Node2D"]
+position = Vector2(0, 44)
+script = ExtResource("1_v82sx")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -290.0
+offset_top = -207.0
+offset_right = 293.0
+offset_bottom = 158.0
+color = Color(0.113725, 0.0862745, 0.0745098, 1)
+
+[node name="menu2" type="TextureButton" parent="."]
+offset_left = -77.0
+offset_top = 51.0
+offset_right = 60.0
+offset_bottom = 112.0
+scale = Vector2(1.1, 1.1)
+texture_normal = ExtResource("1_eskqt")
+texture_pressed = ExtResource("2_lhgxf")
+
+[node name="Label" type="Label" parent="menu2"]
+layout_mode = 0
+offset_left = 6.25002
+offset_top = 22.5
+offset_right = 131.25
+offset_bottom = 74.5
+theme_override_colors/font_color = Color(0.113725, 0.0862745, 0.0745098, 1)
+theme_override_fonts/font = ExtResource("3_yyikt")
+text = "Continue"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="."]
+offset_left = -282.0
+offset_top = -186.0
+offset_right = 285.0
+offset_bottom = -34.0
+theme_override_colors/font_color = Color(1, 0.854902, 0.580392, 1)
+theme_override_fonts/font = ExtResource("3_yyikt")
+text = "Super Spelling Letter Bee - 
+is an asynchronous multiplayer (using SilentWolf) 
+spelling auto-battler with monster letters!
+
+Make words on the top-row 
+to battle other players words on the bot-row
+
+Click on the letters & then the spots to move them
+there is a Drag Mode but it can be a bit buggy
+(change modes in the settings)"
+horizontal_alignment = 1
+
+[node name="Gwj-full-logo-noBg-4k" type="Sprite2D" parent="."]
+position = Vector2(-176, 77)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("4_40all")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = -452.0
+offset_top = 19.0
+offset_right = 115.0
+offset_bottom = 128.0
+theme_override_colors/font_color = Color(1, 0.854902, 0.580392, 1)
+theme_override_fonts/font = ExtResource("3_yyikt")
+text = "made for the godot wild jam #56"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="menu2" to="." method="_on_menu_2_pressed"]

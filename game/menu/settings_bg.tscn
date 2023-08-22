@@ -1,0 +1,293 @@
+[gd_scene load_steps=6 format=3 uid="uid://chijcs022n7t3"]
+
+[ext_resource type="Script" path="res://menu/settings_bg.gd" id="1_2ptw4"]
+[ext_resource type="FontFile" uid="uid://cfachjkk2umhy" path="res://resources/fonts/Helvetica Black Condensed.otf" id="1_d322i"]
+[ext_resource type="Texture2D" uid="uid://c5e84squw6xk" path="res://resources/buttons/menu/menu_1.png" id="2_x5t70"]
+[ext_resource type="FontFile" uid="uid://ckxk3elimfey3" path="res://resources/fonts/Kaph-Regular.otf" id="3_qlukk"]
+[ext_resource type="Texture2D" uid="uid://buvkfxac3dta3" path="res://resources/buttons/menu/menuPressed_1.png" id="3_t8v5x"]
+
+[node name="settings_bg" type="ColorRect"]
+offset_left = -282.0
+offset_top = -172.0
+offset_right = 285.0
+offset_bottom = 167.0
+color = Color(0.113725, 0.0862745, 0.0745098, 1)
+script = ExtResource("1_2ptw4")
+
+[node name="music_slider" type="HSlider" parent="."]
+offset_left = 124.0
+offset_top = 211.0
+offset_right = 452.0
+offset_bottom = 227.0
+min_value = -20.0
+max_value = 20.0
+
+[node name="Label" type="Label" parent="music_slider"]
+layout_mode = 0
+offset_left = 75.0
+offset_top = -38.0
+offset_right = 230.0
+offset_bottom = -8.0
+theme_override_colors/font_color = Color(1, 0.854902, 0.580392, 1)
+theme_override_fonts/font = ExtResource("1_d322i")
+theme_override_font_sizes/font_size = 24
+text = "Music Volume"
+horizontal_alignment = 1
+
+[node name="settings_bg2" type="ColorRect" parent="music_slider"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 338.0
+offset_bottom = 25.0
+mouse_filter = 2
+color = Color(0.321569, 0.0941176, 0.0941176, 1)
+
+[node name="music_indicator" type="Label" parent="music_slider"]
+layout_mode = 0
+offset_left = 253.0
+offset_top = -44.0
+offset_right = 294.0
+offset_bottom = -13.0
+theme_override_colors/font_color = Color(1, 0.854902, 0.580392, 1)
+theme_override_fonts/font = ExtResource("3_qlukk")
+theme_override_font_sizes/font_size = 24
+text = "0"
+horizontal_alignment = 1
+
+[node name="volume_slider" type="HSlider" parent="."]
+layout_mode = 0
+offset_left = 124.0
+offset_top = 291.0
+offset_right = 452.0
+offset_bottom = 307.0
+min_value = -20.0
+max_value = 10.0
+
+[node name="Label" type="Label" parent="volume_slider"]
+layout_mode = 0
+offset_left = 75.0
+offset_top = -38.0
+offset_right = 230.0
+offset_bottom = -8.0
+theme_override_colors/font_color = Color(1, 0.854902, 0.580392, 1)
+theme_override_fonts/font = ExtResource("1_d322i")
+theme_override_font_sizes/font_size = 24
+text = "SFX Volume"
+horizontal_alignment = 1
+
+[node name="settings_bg2" type="ColorRect" parent="volume_slider"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 338.0
+offset_bottom = 25.0
+mouse_filter = 2
+color = Color(0.321569, 0.0941176, 0.0941176, 1)
+
+[node name="volume_indicator" type="Label" parent="volume_slider"]
+layout_mode = 0
+offset_left = 253.0
+offset_top = -44.0
+offset_right = 294.0
+offset_bottom = -13.0
+theme_override_colors/font_color = Color(1, 0.854902, 0.580392, 1)
+theme_override_fonts/font = ExtResource("3_qlukk")
+theme_override_font_sizes/font_size = 24
+text = "0"
+horizontal_alignment = 1
+
+[node name="settings_back" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 355.0
+offset_top = 13.0
+offset_right = 492.0
+offset_bottom = 74.0
+rotation = -0.00735089
+scale = Vector2(1.2, 1.2)
+texture_normal = ExtResource("2_x5t70")
+texture_pressed = ExtResource("3_t8v5x")
+
+[node name="Label" type="Label" parent="settings_back"]
+layout_mode = 0
+offset_left = 18.6667
+offset_top = 20.0
+offset_right = 119.667
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(0.113725, 0.0862745, 0.0745098, 1)
+theme_override_fonts/font = ExtResource("1_d322i")
+text = "BACK"
+horizontal_alignment = 1
+
+[node name="drag_mode" type="CheckBox" parent="."]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 43.0
+offset_right = 146.0
+offset_bottom = 67.0
+theme_override_colors/font_color = Color(1, 0.854902, 0.580392, 1)
+theme_override_fonts/font = ExtResource("1_d322i")
+
+[node name="settings_bg2" type="ColorRect" parent="drag_mode"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -10.0
+offset_top = -4.0
+offset_right = 109.0
+offset_bottom = 27.0
+mouse_filter = 2
+color = Color(0.321569, 0.0941176, 0.0941176, 1)
+
+[node name="Label" type="Label" parent="drag_mode"]
+layout_mode = 0
+offset_left = -30.0
+offset_top = 54.0
+offset_right = 187.0
+offset_bottom = 84.0
+theme_override_colors/font_color = Color(1, 0.854902, 0.580392, 1)
+theme_override_fonts/font = ExtResource("1_d322i")
+text = "drag mode = you can drag letters
+(drag mode is a bit buggy)"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="drag_mode"]
+layout_mode = 0
+offset_left = -34.0
+offset_top = 33.0
+offset_right = 224.0
+offset_bottom = 71.0
+theme_override_colors/font_color = Color(1, 0.854902, 0.580392, 1)
+theme_override_fonts/font = ExtResource("1_d322i")
+text = "click mode = clicking on letters / spots"
+horizontal_alignment = 1
+
+[node name="mode_label" type="Label" parent="drag_mode"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 5.0
+offset_right = 103.0
+offset_bottom = 35.0
+theme_override_colors/font_color = Color(1, 0.854902, 0.580392, 1)
+theme_override_fonts/font = ExtResource("1_d322i")
+text = "Click Mode"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="drag_mode"]
+layout_mode = 0
+offset_left = -78.0
+offset_top = -22.0
+offset_right = 180.0
+offset_bottom = 16.0
+theme_override_colors/font_color = Color(1, 0.854902, 0.580392, 1)
+theme_override_fonts/font = ExtResource("1_d322i")
+text = "HOW TO MOVE LETTERS"
+horizontal_alignment = 1
+
+[node name="guns" type="CheckBox" parent="."]
+layout_mode = 0
+offset_left = 389.0
+offset_top = 111.0
+offset_right = 488.0
+offset_bottom = 135.0
+theme_override_colors/font_color = Color(1, 0.854902, 0.580392, 1)
+theme_override_fonts/font = ExtResource("1_d322i")
+
+[node name="settings_bg2" type="ColorRect" parent="guns"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -10.0
+offset_top = -4.0
+offset_right = 135.0
+offset_bottom = 27.0
+mouse_filter = 2
+color = Color(0.321569, 0.0941176, 0.0941176, 1)
+
+[node name="mode_label" type="Label" parent="guns"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 5.0
+offset_right = 103.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(1, 0.854902, 0.580392, 1)
+theme_override_fonts/font = ExtResource("1_d322i")
+text = "No Guns"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="guns"]
+layout_mode = 0
+offset_left = -64.0
+offset_top = -20.0
+offset_right = 194.0
+offset_bottom = 18.0
+theme_override_colors/font_color = Color(1, 0.854902, 0.580392, 1)
+theme_override_fonts/font = ExtResource("1_d322i")
+text = "GIVE THEM GUNS?"
+horizontal_alignment = 1
+
+[node name="mute_music" type="CheckBox" parent="."]
+offset_left = 45.0
+offset_top = 205.0
+offset_right = 70.0
+offset_bottom = 229.0
+theme_override_colors/font_color = Color(1, 0.854902, 0.580392, 1)
+theme_override_fonts/font = ExtResource("1_d322i")
+
+[node name="settings_bg2" type="ColorRect" parent="mute_music"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -13.0
+offset_top = -6.0
+offset_right = 35.0
+offset_bottom = 32.0
+mouse_filter = 2
+color = Color(0.321569, 0.0941176, 0.0941176, 1)
+
+[node name="mode_label" type="Label" parent="mute_music"]
+layout_mode = 0
+offset_left = -27.0
+offset_top = -23.0
+offset_right = 51.0
+offset_bottom = 7.0
+theme_override_colors/font_color = Color(1, 0.854902, 0.580392, 1)
+theme_override_fonts/font = ExtResource("1_d322i")
+text = "Mute Music"
+horizontal_alignment = 1
+
+[node name="mute_sfx" type="CheckBox" parent="."]
+offset_left = 45.0
+offset_top = 284.0
+offset_right = 70.0
+offset_bottom = 308.0
+theme_override_colors/font_color = Color(1, 0.854902, 0.580392, 1)
+theme_override_fonts/font = ExtResource("1_d322i")
+
+[node name="settings_bg2" type="ColorRect" parent="mute_sfx"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -13.0
+offset_top = -6.0
+offset_right = 35.0
+offset_bottom = 32.0
+mouse_filter = 2
+color = Color(0.321569, 0.0941176, 0.0941176, 1)
+
+[node name="mode_label" type="Label" parent="mute_sfx"]
+layout_mode = 0
+offset_left = -27.0
+offset_top = -23.0
+offset_right = 51.0
+offset_bottom = 7.0
+theme_override_colors/font_color = Color(1, 0.854902, 0.580392, 1)
+theme_override_fonts/font = ExtResource("1_d322i")
+text = "Mute SFX"
+horizontal_alignment = 1
+
+[connection signal="value_changed" from="music_slider" to="." method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="volume_slider" to="." method="_on_volume_slider_value_changed"]
+[connection signal="pressed" from="settings_back" to="." method="_on_settings_back_pressed"]
+[connection signal="toggled" from="drag_mode" to="." method="_on_drag_mode_toggled"]
+[connection signal="toggled" from="guns" to="." method="_on_guns_toggled"]
+[connection signal="toggled" from="mute_music" to="." method="_on_mute_music_toggled"]
+[connection signal="toggled" from="mute_sfx" to="." method="_on_mute_sfx_toggled"]
