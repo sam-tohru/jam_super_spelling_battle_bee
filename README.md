@@ -1,5 +1,6 @@
-# super_spelling_battle_bee
+# super_spelling_battle_bee Jam Version
 an asynchronous multiplayer word game I made in Godot 4 (in 1 week for a game-jam)
+This is the original source code from the Jam version I submitted in the middle of 2023
 
 can be played online at itch: https://kobemano.itch.io/super-spelling-battle-bee
 
